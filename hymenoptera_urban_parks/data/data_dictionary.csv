@@ -1,0 +1,32 @@
+file,variable,data_type,unit,definition
+hymenoptera_samples.csv,sample_id,string,none,Generated unique public record identifier: park_id + campaign + ordered sampling interval; not the original laboratory code.
+hymenoptera_samples.csv,park_id,categorical (P1-P6),none,"Urban forest park identifier, as defined in README.md."
+hymenoptera_samples.csv,campaign,categorical,season,2023-2024 or 2024-2025 seasonal sampling campaign.
+hymenoptera_samples.csv,sampling_interval,integer (1-13),interval order,Chronological order of approximately 10-day Malaise-trap collection intervals within a park and campaign.
+hymenoptera_samples.csv,trapping_days,integer,days,Recorded effective Malaise-trap operation used as the log-offset in abundance models; should not be recalculated from calendar dates.
+hymenoptera_samples.csv,Apoidea,integer >= 0,individuals,Observed number of Hymenoptera specimens assigned to superfamily Apoidea in one park-campaign-interval sample.
+hymenoptera_samples.csv,Chalcidoidea,integer >= 0,individuals,Observed number of Hymenoptera specimens assigned to superfamily Chalcidoidea in one park-campaign-interval sample.
+hymenoptera_samples.csv,Ceraphronoidea,integer >= 0,individuals,Observed number of Hymenoptera specimens assigned to superfamily Ceraphronoidea in one park-campaign-interval sample.
+hymenoptera_samples.csv,Chrysidoidea,integer >= 0,individuals,Observed number of Hymenoptera specimens assigned to superfamily Chrysidoidea in one park-campaign-interval sample.
+hymenoptera_samples.csv,Cynipoidea,integer >= 0,individuals,Observed number of Hymenoptera specimens assigned to superfamily Cynipoidea in one park-campaign-interval sample.
+hymenoptera_samples.csv,Diaprioidea,integer >= 0,individuals,Observed number of Hymenoptera specimens assigned to superfamily Diaprioidea in one park-campaign-interval sample.
+hymenoptera_samples.csv,Evanioidea,integer >= 0,individuals,Observed number of Hymenoptera specimens assigned to superfamily Evanioidea in one park-campaign-interval sample.
+hymenoptera_samples.csv,Formicoidea,integer >= 0,individuals,Observed number of Hymenoptera specimens assigned to superfamily Formicoidea in one park-campaign-interval sample.
+hymenoptera_samples.csv,Ichneumonoidea,integer >= 0,individuals,Observed number of Hymenoptera specimens assigned to superfamily Ichneumonoidea in one park-campaign-interval sample.
+hymenoptera_samples.csv,Platygastroidea,integer >= 0,individuals,Observed number of Hymenoptera specimens assigned to superfamily Platygastroidea in one park-campaign-interval sample.
+hymenoptera_samples.csv,Proctotrupoidea,integer >= 0,individuals,Observed number of Hymenoptera specimens assigned to superfamily Proctotrupoidea in one park-campaign-interval sample.
+hymenoptera_samples.csv,Tenthredinoidea,integer >= 0,individuals,Observed number of Hymenoptera specimens assigned to superfamily Tenthredinoidea in one park-campaign-interval sample.
+hymenoptera_samples.csv,Trigonaloidea,integer >= 0,individuals,Observed number of Hymenoptera specimens assigned to superfamily Trigonaloidea in one park-campaign-interval sample.
+hymenoptera_samples.csv,Vespoidea,integer >= 0,individuals,Observed number of Hymenoptera specimens assigned to superfamily Vespoidea in one park-campaign-interval sample.
+landscape_predictors.csv,park_id,categorical (P1-P6),none,Join key to hymenoptera_samples.csv; park-level independent spatial unit (n=6).
+landscape_predictors.csv,fragment_area_ha,numeric,ha,"Area of the sampled urban forest park/fragment, reported in Table 1."
+landscape_predictors.csv,enn_m,numeric,m,"Euclidean nearest-neighbor shortest edge-to-edge distance between the focal natural-vegetation patch and closest other natural-vegetation patch (MapBiomas classes 3, 4, 11; eight-neighbor connectivity), rounded to 2 decimals as analyzed."
+landscape_predictors.csv,ndvi_250m,numeric,unitless,Mean Landsat 9 spectral NDVI for a 250-m radius around the Malaise sampling location; as supplied in the analyzed landscape source.
+landscape_predictors.csv,natural_vegetation_pct_250m,numeric,percent (0-100),"Aggregate percent of Forest Formation (MapBiomas class 3), Savanna Formation (class 4), and Wetland (class 11) in a 250-m buffer; separate classes intentionally not released."
+landscape_predictors.csv,urbanized_area_pct_250m,numeric,percent (0-100),Percent of mapped urban infrastructure within a 250-m buffer; independent of other land-cover classes.
+landscape_predictors.csv,ndvi_500m,numeric,unitless,Mean Landsat 9 spectral NDVI for a 500-m radius around the Malaise sampling location; as supplied in the analyzed landscape source.
+landscape_predictors.csv,natural_vegetation_pct_500m,numeric,percent (0-100),"Aggregate percent of Forest Formation (MapBiomas class 3), Savanna Formation (class 4), and Wetland (class 11) in a 500-m buffer; separate classes intentionally not released."
+landscape_predictors.csv,urbanized_area_pct_500m,numeric,percent (0-100),Percent of mapped urban infrastructure within a 500-m buffer; independent of other land-cover classes.
+landscape_predictors.csv,ndvi_1000m,numeric,unitless,Mean Landsat 9 spectral NDVI for a 1000-m radius around the Malaise sampling location; as supplied in the analyzed landscape source.
+landscape_predictors.csv,natural_vegetation_pct_1000m,numeric,percent (0-100),"Aggregate percent of Forest Formation (MapBiomas class 3), Savanna Formation (class 4), and Wetland (class 11) in a 1000-m buffer; separate classes intentionally not released."
+landscape_predictors.csv,urbanized_area_pct_1000m,numeric,percent (0-100),Percent of mapped urban infrastructure within a 1000-m buffer; independent of other land-cover classes.

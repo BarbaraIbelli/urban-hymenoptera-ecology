@@ -1,0 +1,5 @@
+Data creator: Bárbara Ibelli Victorino (Federal University of São Carlos, Brazil).
+Dataset: Hymenoptera superfamily abundances and landscape attributes in six urban forest parks, São Carlos, Brazil (2023–2025).
+Repository: https://github.com/BarbaraIbelli/urban-hymenoptera-ecology
+Subfolder: hymenoptera_urban_parks/
+Specific commit/version: to be added after upload.
